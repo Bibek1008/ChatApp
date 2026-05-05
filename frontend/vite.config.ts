@@ -16,4 +16,7 @@ export default defineConfig({
       "/api": { target: "http://localhost:5174" },
     },
   },
+  define: {
+    'import.meta.env.VITE_API_URL': JSON.stringify(process.env.NODE_ENV === 'production' ? 'https://chatapp-z2a8.onrender.com' : 'http://localhost:5174')
+  },
 });
